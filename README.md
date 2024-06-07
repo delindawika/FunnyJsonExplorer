@@ -71,6 +71,23 @@ If you want to add another icon family other than poker-face/moon-sun, here are 
 <img width="1087" alt="Screenshot 2024-06-08 at 02 49 23" src="https://github.com/delindawika/FunnyJsonExplorer/assets/65715881/bb48e21a-1622-4c42-af2a-7c0a468831b4">
 
 ## Implementation Using Other Design Patterns
-#### Factory
 #### Composite
+- Component Interface/Abstract Class
+
+Attributes: Include common attributes such as style and icon.
+Methods: Include methods like draw(), add(Component), remove(Component), and accessor methods for style and icon (e.g., getStyle(), setIcon()).
+
+- Leaf Class
+  
+This class implements or extends the Component class. It will use the style and icon attributes defined in Component for its drawing operations or other functionality. Since leaves represent the end objects in a composition, they will typically implement the drawing behavior (draw()) using their specific styles and icons.
+
+- Composite Class
+  
+The composite class also implements or extends the Component. It will manage a collection of Component objects and can propagate style and icon settings to its children if such propagation is needed.
+
 #### Builder
+To incorporate the Builder design pattern into the existing UML for the FunnyJsonExplorer project, we can follow these modifications:
+- Builder Interface: Defines methods to construct Container parts step-by-step, such as buildContainer(), buildStyle(), and buildIcon().
+- Concrete Builders: Implement the Builder interface with classes like SimpleContainerBuilder and ComplexContainerBuilder to construct and assemble parts of the Container in various configurations.
+- Director Class: Utilizes a Builder to orchestrate the construction of the Container through the construct() method.
+- Client Class: Interacts with the Director and ConcreteBuilders to initiate object creation
