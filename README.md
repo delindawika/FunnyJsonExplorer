@@ -33,6 +33,7 @@ This is an abstract base class declaring an interface for creating icon products
 The client uses interfaces declared by the abstract factory and abstract product to interact with the products. The client is independent of how these products are created, allowing the client code to support different product variants without modification.
 
 ## Output
+Using the test cases from example.json file
 #### Style=Tree style, icon=poker-face
 <img width="669" alt="Screenshot 2024-06-08 at 02 02 04" src="https://github.com/delindawika/FunnyJsonExplorer/assets/65715881/ead20793-7289-4cc8-b9d9-b756a44d2956">
 
