@@ -1,4 +1,4 @@
-from Style import TreeStyle,RectangleStyle,testStyle
+from Style import TreeStyle,RectangleStyle
 # Abstract Factory
 class StyleFactory:
     def create_style(self):
